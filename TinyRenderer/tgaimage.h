@@ -92,7 +92,6 @@ public:
 	unsigned char *buffer();
 	void clear();
 
-	void line(int x0, int y0, int x1, int y1, const TGAColor c);
 };
 
 #endif //__IMAGE_H__

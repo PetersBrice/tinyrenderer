@@ -3,6 +3,7 @@
 #include <string.h>
 #include <time.h>
 #include <math.h>
+#include <cmath>
 #include "tgaimage.h"
 
 TGAImage::TGAImage() : data(NULL), width(0), height(0), bytespp(0) {
@@ -350,11 +351,4 @@ bool TGAImage::scale(int w, int h) {
 	return true;
 }
 
-void TGAImage::line(int x0, int y0, int x1, int y1, const TGAColor c){
-    for (float t = 0.; t < 1.; t+=.01){
-        int x = x0*(1.-t) + x1*t;
-        int y = y0*(1.-t) + y1*t;
 
-        this->set(x, y, c);
-    }
-}
