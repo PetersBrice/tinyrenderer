@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="tinyrenderer" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/brice/M1/Infographie/tinyrenderer/TinyRenderer" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/brice/M1/Infographie/tinyrenderer/TinyRenderer" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="tinyrenderer">
+         <Option output="/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/tinyrenderer" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/brice/M1/Infographie/tinyrenderer/TinyRenderer" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DSRC_PATH=&quot;/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/&quot;" />
+            <Add directory="/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/common" />
+            <Add directory="/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/lib" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/Makefile&quot;  VERBOSE=1 tinyrenderer" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="tinyrenderer/fast">
+         <Option output="/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/tinyrenderer" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/brice/M1/Infographie/tinyrenderer/TinyRenderer" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DSRC_PATH=&quot;/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/&quot;" />
+            <Add directory="/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/common" />
+            <Add directory="/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/lib" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/Makefile&quot;  VERBOSE=1 tinyrenderer/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/geometry.cpp">
+      </Unit>
+      <Unit filename="/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/main.cpp">
+      </Unit>
+      <Unit filename="/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/model.cpp">
+      </Unit>
+      <Unit filename="/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/tgaimage.cpp">
+      </Unit>
+      <Unit filename="/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/geometry.h">
+      </Unit>
+      <Unit filename="/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/model.h">
+      </Unit>
+      <Unit filename="/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/tgaimage.h">
+      </Unit>
+      <Unit filename="/home/brice/M1/Infographie/tinyrenderer/TinyRenderer/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>
