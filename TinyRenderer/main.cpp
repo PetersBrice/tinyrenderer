@@ -137,6 +137,7 @@ Vec3f barycentric(Vec3f *p, Vec3f P) {
 void triangle(Vec3f *pts,Vec2f u0, Vec2f u1, Vec2f u2,Vec3f v0, Vec3f v1, Vec3f v2,float zbuffer[], TGAImage &image,Vec3f light_dir) {
     //calcul de la bounding box
    Vec2f bboxmin,bboxmax;
+
    bboxmin.x = min(pts[0].x,min(pts[1].x,pts[2].x));
    bboxmax.x = max(pts[0].x,max(pts[1].x,pts[2].x));
    bboxmin.y = min(pts[0].y,min(pts[1].y,pts[2].y));
@@ -170,6 +171,7 @@ void triangle(Vec3f *pts,Vec2f u0, Vec2f u1, Vec2f u2,Vec3f v0, Vec3f v1, Vec3f 
             }
         }
    }
+
 }
 
 void rasterize(Vec2i p0, Vec2i p1, TGAImage &image, TGAColor color, int ybuffer[]) {
@@ -192,6 +194,15 @@ Vec3f world2screen(Vec3f v) {
     return Vec3f(int((v.x+1.)*width/2.+.5), int((v.y+1.)*height/2.+.5), v.z);
 }
 
+void transform(Vec3f *v,float c){
+    for(int i = 0;i< 3;i++){
+        cout << i<<endl;
+        v[i][0] = v[i][0]/((1-v[i][2])/c);
+        v[i][1] = v[i][1]/((1-v[i][2])/c);
+        v[i][2] = v[i][2]/((1-v[i][2])/c);
+    }
+}
+
 int main(int argc, char** argv) {
     if (2==argc) {
         model = new Model(argv[1]);
@@ -211,10 +222,10 @@ int main(int argc, char** argv) {
     for (int i=0; i<model->nfaces(); i++) {
         std::vector<int> face = model->face(i);
         Vec3f pts_s[3];
-        Vec3f pts_w[3];
         for (int i=0; i<3; i++){
             pts_s[i] = world2screen(model->vert(face[i]));
         }
+         //   transform(pts_s,2);
             v0 = model->normal(i,0);
             v1 = model->normal(i,1);
             v2 = model->normal(i,2);
